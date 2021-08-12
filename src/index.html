@@ -1,16 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>sasageyo</title>
-</head>
-<body>
-<header>
-    <top-bar />
-</header>
-<main>
-    <h1>Webpack</h1>
-</main>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>sasageyo</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: var(--bg-dark);
+                color: var(--text-secondary);
+            }
+            header {
+                /* color: var(--text); */
+            }
+            main {
+                background-color: grey;
+                max-width: 1080px;
+                width: 100%;
+                display: flex;
+            }
+            aside {
+                /* background-color: azure; */
+            }
+            
+            #content {
+                /* background-color: antiquewhite; */
+                display: flex;
+                flex-direction: column;
+                flex: 1
+            }
+            article {
+                margin-bottom: 2rem;
+            }
+            h2 {
+                /* color: var(--text); */
+                font-size: 1.25rem;
+                margin-bottom: 20px;
+                color: var(--text-primary);
+            }
+            .list-anime {
+                display: flex;
+                /* justify-content: space-evenly; */
+                flex-wrap: nowrap;
+                overflow-x: auto;
+            }
+            section {
+                width: 199px;
+                position: relative;
+                margin: 0.5rem;
+                flex: 0 0 auto;
+            }
+            section p {
+                position: absolute;
+                background-color: rgba(0, 0, 0, .5);
+                padding: 4px;
+                font-size: 0.75rem;
+            }
+            section p.text-eps {
+                border-top-left-radius: 8px;
+                left: 0;
+            }
+            section p.text-type {
+                border-top-right-radius: 8px;
+                top: 0;
+                right: 0;
+            }
+            figure {
+               
+            }
+            figure img {
+                width: 100%;
+                height: 279px;
+                border-radius: 8px;
+                margin-bottom: 0.5rem;
+            }
+            figure figcaption {
+                display: flex;
+                justify-content: space-between;
+                /* color: var(--text); */
+            }
+            figure figcaption span {
+                width: 48px;
+                flex-shrink: 0;
+                margin-left: 1rem;
+                display: flex;
+            }
+            figure figcaption img {
+                width: 1rem;
+                height: 1rem;
+                margin-right: 0.5rem;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            Ini header
+        </header>
+        <main>
+            <div id='content'>
+                <article>
+                    <h2>Summer Anime 2021</h2>
+                    <section>
+                        <p class="text-eps">12 Espisode</p>
+                        <p class="text-type">TV</p>
+                        <figure>
+                            <img src="https://cdn.myanimelist.net/images/anime/1952/116523.jpg?s=30beef05505b8619a8c541568192cb01" alt="">
+                            <figcaption>judul anime sdsadfsf afdsfsd<span><img src="/src/assets/star-icon.png" alt="star icon"/><caption>8.5</caption></span></figcaption>
+                        </figure>
+                    </section>
+                </article>
+                <article>
+                    <h2>Upcoming Anime</h2>
+                        <div class="list-anime">
+                            <section>
+                                <p class="text-eps">12 Espisode</p>
+                                <p class="text-type">TV</p>
+                                <figure>
+                                    <img src="https://cdn.myanimelist.net/images/anime/1952/116523.jpg?s=30beef05505b8619a8c541568192cb01" alt="">
+                                    <figcaption>judul anime sdsadfsf afdsfsd<span><img src="/src/assets/star-icon.png" alt="star icon"/><caption>8.5</caption></span></figcaption>
+                                </figure>
+                            </section>
+                            <section>
+                                <p class="text-eps">12 Espisode</p>
+                                <p class="text-type">TV</p>
+                                <figure>
+                                    <img src="https://cdn.myanimelist.net/images/anime/1952/116523.jpg?s=30beef05505b8619a8c541568192cb01" alt="">
+                                    <figcaption>judul anime sdsadfsf afdsfsd<span><img src="/src/assets/star-icon.png" alt="star icon"/><caption>8.5</caption></span></figcaption>
+                                </figure>
+                            </section>
+                            <section>
+                                <p class="text-eps">12 Espisode</p>
+                                <p class="text-type">TV</p>
+                                <figure>
+                                    <img src="https://cdn.myanimelist.net/images/anime/1952/116523.jpg?s=30beef05505b8619a8c541568192cb01" alt="">
+                                    <figcaption>judul anime sdsadfsf afdsfsd<span><img src="/src/assets/star-icon.png" alt="star icon"/><caption>8.5</caption></span></figcaption>
+                                </figure>
+                            </section>
+                            <section>
+                                <p class="text-eps">12 Espisode</p>
+                                <p class="text-type">TV</p>
+                                <figure>
+                                    <img src="https://cdn.myanimelist.net/images/anime/1952/116523.jpg?s=30beef05505b8619a8c541568192cb01" alt="">
+                                    <figcaption>judul anime sdsadfsf afdsfsd<span><img src="/src/assets/star-icon.png" alt="star icon"/><caption>8.5</caption></span></figcaption>
+                                </figure>
+                            </section>
+                            <section>
+                                <p class="text-eps">12 Espisode</p>
+                                <p class="text-type">TV</p>
+                                <figure>
+                                    <img src="https://cdn.myanimelist.net/images/anime/1952/116523.jpg?s=30beef05505b8619a8c541568192cb01" alt="">
+                                    <figcaption>judul anime sdsadfsf afdsfsd<span><img src="/src/assets/star-icon.png" alt="star icon"/><caption>8.5</caption></span></figcaption>
+                                </figure>
+                            </section>
+                            <section>
+                                <p class="text-eps">12 Espisode</p>
+                                <p class="text-type">TV</p>
+                                <figure>
+                                    <img src="https://cdn.myanimelist.net/images/anime/1952/116523.jpg?s=30beef05505b8619a8c541568192cb01" alt="">
+                                    <figcaption>judul anime sdsadfsf afdsfsd<span><img src="/src/assets/star-icon.png" alt="star icon"/><caption>8.5</caption></span></figcaption>
+                                </figure>
+                            </section>
+                        </div>
+                </article>
+            </div>
+            <aside>ini Aside</aside>
+        </main>
+    </body>
 </html>

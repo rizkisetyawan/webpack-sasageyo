@@ -1,4 +1,5 @@
+import './styles/style.css';
 import './components/top-bar';
-import main from './view/main';
+import home from './pages/home';
 
-document.addEventListener('DOMContentLoaded', main);
+document.addEventListener('DOMContentLoaded', home);
