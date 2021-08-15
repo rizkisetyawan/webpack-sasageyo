@@ -1,176 +1,560 @@
-<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>sasageyo</title>
-        <style>
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-            }
-            body {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                background-color: var(--bg-dark);
-                color: var(--text-secondary);
-            }
-            header {
-                /* color: var(--text); */
-            }
-            main {
-                background-color: grey;
-                max-width: 1080px;
-                width: 100%;
-                display: flex;
-            }
-            aside {
-                /* background-color: azure; */
-            }
-            
-            #content {
-                /* background-color: antiquewhite; */
-                display: flex;
-                flex-direction: column;
-                flex: 1
-            }
-            article {
-                margin-bottom: 2rem;
-            }
-            h2 {
-                /* color: var(--text); */
-                font-size: 1.25rem;
-                margin-bottom: 20px;
-                color: var(--text-primary);
-            }
-            .list-anime {
-                display: flex;
-                /* justify-content: space-evenly; */
-                flex-wrap: nowrap;
-                overflow-x: auto;
-            }
-            section {
-                width: 199px;
-                position: relative;
-                margin: 0.5rem;
-                flex: 0 0 auto;
-            }
-            section p {
-                position: absolute;
-                background-color: rgba(0, 0, 0, .5);
-                padding: 4px;
-                font-size: 0.75rem;
-            }
-            section p.text-eps {
-                border-top-left-radius: 8px;
-                left: 0;
-            }
-            section p.text-type {
-                border-top-right-radius: 8px;
-                top: 0;
-                right: 0;
-            }
-            figure {
-               
-            }
-            figure img {
-                width: 100%;
-                height: 279px;
-                border-radius: 8px;
-                margin-bottom: 0.5rem;
-            }
-            figure figcaption {
-                display: flex;
-                justify-content: space-between;
-                /* color: var(--text); */
-            }
-            figure figcaption span {
-                width: 48px;
-                flex-shrink: 0;
-                margin-left: 1rem;
-                display: flex;
-            }
-            figure figcaption img {
-                width: 1rem;
-                height: 1rem;
-                margin-right: 0.5rem;
-            }
-        </style>
-    </head>
-    <body>
-        <header>
-            Ini header
-        </header>
-        <main>
-            <div id='content'>
-                <article>
-                    <h2>Summer Anime 2021</h2>
-                    <section>
-                        <p class="text-eps">12 Espisode</p>
-                        <p class="text-type">TV</p>
-                        <figure>
-                            <img src="https://cdn.myanimelist.net/images/anime/1952/116523.jpg?s=30beef05505b8619a8c541568192cb01" alt="">
-                            <figcaption>judul anime sdsadfsf afdsfsd<span><img src="/src/assets/star-icon.png" alt="star icon"/><caption>8.5</caption></span></figcaption>
-                        </figure>
-                    </section>
-                </article>
-                <article>
-                    <h2>Upcoming Anime</h2>
-                        <div class="list-anime">
-                            <section>
-                                <p class="text-eps">12 Espisode</p>
-                                <p class="text-type">TV</p>
-                                <figure>
-                                    <img src="https://cdn.myanimelist.net/images/anime/1952/116523.jpg?s=30beef05505b8619a8c541568192cb01" alt="">
-                                    <figcaption>judul anime sdsadfsf afdsfsd<span><img src="/src/assets/star-icon.png" alt="star icon"/><caption>8.5</caption></span></figcaption>
-                                </figure>
-                            </section>
-                            <section>
-                                <p class="text-eps">12 Espisode</p>
-                                <p class="text-type">TV</p>
-                                <figure>
-                                    <img src="https://cdn.myanimelist.net/images/anime/1952/116523.jpg?s=30beef05505b8619a8c541568192cb01" alt="">
-                                    <figcaption>judul anime sdsadfsf afdsfsd<span><img src="/src/assets/star-icon.png" alt="star icon"/><caption>8.5</caption></span></figcaption>
-                                </figure>
-                            </section>
-                            <section>
-                                <p class="text-eps">12 Espisode</p>
-                                <p class="text-type">TV</p>
-                                <figure>
-                                    <img src="https://cdn.myanimelist.net/images/anime/1952/116523.jpg?s=30beef05505b8619a8c541568192cb01" alt="">
-                                    <figcaption>judul anime sdsadfsf afdsfsd<span><img src="/src/assets/star-icon.png" alt="star icon"/><caption>8.5</caption></span></figcaption>
-                                </figure>
-                            </section>
-                            <section>
-                                <p class="text-eps">12 Espisode</p>
-                                <p class="text-type">TV</p>
-                                <figure>
-                                    <img src="https://cdn.myanimelist.net/images/anime/1952/116523.jpg?s=30beef05505b8619a8c541568192cb01" alt="">
-                                    <figcaption>judul anime sdsadfsf afdsfsd<span><img src="/src/assets/star-icon.png" alt="star icon"/><caption>8.5</caption></span></figcaption>
-                                </figure>
-                            </section>
-                            <section>
-                                <p class="text-eps">12 Espisode</p>
-                                <p class="text-type">TV</p>
-                                <figure>
-                                    <img src="https://cdn.myanimelist.net/images/anime/1952/116523.jpg?s=30beef05505b8619a8c541568192cb01" alt="">
-                                    <figcaption>judul anime sdsadfsf afdsfsd<span><img src="/src/assets/star-icon.png" alt="star icon"/><caption>8.5</caption></span></figcaption>
-                                </figure>
-                            </section>
-                            <section>
-                                <p class="text-eps">12 Espisode</p>
-                                <p class="text-type">TV</p>
-                                <figure>
-                                    <img src="https://cdn.myanimelist.net/images/anime/1952/116523.jpg?s=30beef05505b8619a8c541568192cb01" alt="">
-                                    <figcaption>judul anime sdsadfsf afdsfsd<span><img src="/src/assets/star-icon.png" alt="star icon"/><caption>8.5</caption></span></figcaption>
-                                </figure>
-                            </section>
-                        </div>
-                </article>
-            </div>
-            <aside>ini Aside</aside>
-        </main>
-    </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="icon" type="image/png" href="/src/assets/logo-web.png" />
+		<title>Sasageyo</title>
+		<!DOCTYPE html>
+		<style>
+			* {
+				padding: 0;
+				box-sizing: border-box;
+			}
+			body {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				background-color: var(--bg-dark);
+				color: var(--text-secondary);
+			}
+			main {
+				max-width: 1180px;
+				width: 100%;
+				display: flex;
+				margin: 0;
+			}
+			#content {
+				display: flex;
+				flex-direction: column;
+				flex: 1;
+				padding: 2rem;
+				padding-left: 0;
+			}
+			article {
+				margin-bottom: 4rem;
+			}
+			h2 {
+				font-size: 1.25rem;
+				margin-bottom: 20px;
+				color: var(--text-primary);
+			}
+			.list-content-anime {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+				height: 323px;
+				overflow: hidden;
+				gap: 1rem;
+			}
+			section {
+				position: relative;
+			}
+			.text-eps,
+			.text-type {
+				position: absolute;
+				background-color: rgba(0, 0, 0, 0.5);
+				padding: 8px;
+				font-size: 0.75rem;
+			}
+			.text-eps {
+				border-top-left-radius: 16px;
+				left: 0;
+			}
+			.text-type {
+				border-top-right-radius: 16px;
+				top: 0;
+				right: 0;
+			}
+			.img-item-content {
+				width: 100%;
+				height: 279px;
+				border-radius: 16px;
+				margin-bottom: 0.5rem;
+				object-fit: cover;
+			}
+			.fcn-item-content {
+				display: flex;
+				justify-content: space-between;				
+			}
+			.star-wrapper {
+				width: 48px;
+				flex-shrink: 0;
+				margin-left: 1rem;
+				display: flex;
+			}
+			.star-icon {
+				width: 1rem;
+				height: 1rem;
+				margin-right: 0.5rem;
+			}
+			.search-wrapper {
+				position: relative;
+				margin-bottom: 3rem;
+				display: flex;
+				align-items: center;
+			}
+			.search-icon {
+				width: 35px;
+				height: 35px;
+				position: absolute;
+				right: 8px;
+				padding: 8px;
+				cursor: pointer;
+			}
+			.input-search {
+				width: 100%;
+				padding: 8px;
+				border-radius: 8px;
+				background-color: var(--bg-input);
+				border: 1px solid var(--bg-input);
+			}
+			.input-search::placeholder {				
+				color: var(--text-secondary);
+			}			
+			aside {
+				padding: 2rem;
+				padding-right: 0;
+			}
+			.img-item-side {
+				width: 75px;
+				height: 100px;
+				border-radius: 8px;
+			}
+			.item-side-anime {
+				display: flex;
+				margin-bottom: 1rem;
+			}
+			h3 {
+				font-size: 1rem;
+			}
+			.text-genre {
+				margin-top: 4px;
+				font-size: 0.9rem;
+				font-weight: 400;
+			}
+			.wrap-item-info {
+				width: 130px;
+				padding: 4px 0;
+				margin-left: 1rem;
+				display: flex;
+				flex-direction: column;
+			}
+			.wrap-star-side {
+				flex: 1;
+				display: flex;
+				justify-content: space-between;
+				align-items: flex-end;
+			}
+			.fav-wrapper {
+				margin-top: 8px;
+				flex-shrink: 0;
+				display: flex;
+			}
+			.fav-icon {
+				width: 1rem;
+				height: 1rem;
+				margin-right: 0.5rem;
+			}
+			.fav-count {
+				font-size: 0.9rem;
+				font-weight: 400;
+			}
+			.star-wrapper-side {
+				margin-left: 0;
+			}
+			h1 {
+				font-size: 44px;
+				color: var(--primary);
+				margin-bottom: 1rem;
+			}
+			.logo-icon {
+				width: 4rem;
+			}
+			.art-side {
+				margin-bottom: 3rem;
+			}
+			.jumbotron {				
+				display: flex;
+				padding: 2rem;
+				margin-bottom: 0;
+			}
+			header {
+				max-width: 1180px;
+				width: 100%;
+				margin-top: 1rem;
+				padding: 0 2rem;			
+				border-radius: 1rem;
+				background-color: #000;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+			}
+			.img-titan-kolosal {				
+				height: 300px;
+				margin-left: 3rem;
+			}
+			.second-title {
+				font-size: 1.25rem;
+				font-weight: 400;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<div>
+				<h1>Sasa<span style="color: #fff">geyo</span></h1>
+				<p class="second-title">Anime move us like nothing else can, whether they’re scary, funny, dramatic, romantic or anywhere in-between. So many titles, so much to experience.</p>
+			</div>
+			<img
+				class="img-titan-kolosal"
+				src="/src/assets/titan-kolosal.png"
+				alt="logo icon"
+			/>
+		</header>
+		<main>
+			<div id="content">
+				<article>
+					<h2>Summer 2021 Anime</h2>
+					<div class="list-content-anime">
+						<section>
+							<p class="text-eps">12 Espisode</p>
+							<p class="text-type">TV</p>
+							<figure>
+								<img
+									class="img-item-content"
+									src="https://cdn.myanimelist.net/images/anime/1952/116523.jpg?s=30beef05505b8619a8c541568192cb01"
+									alt=""
+								/>
+								<figcaption class="fcn-item-content">
+									judul anime sdsadfsf afdsfsd Loremg, ipsum dolor.g<span
+										class="star-wrapper"
+										><img
+											class="star-icon"
+											src="/src/assets/star-icon.png"
+											alt="star icon"
+										/>
+										<caption>
+											8.5
+										</caption></span
+									>
+								</figcaption>
+							</figure>
+						</section>
+						<section>
+							<p class="text-eps">12 Espisode</p>
+							<p class="text-type">TV</p>
+							<figure>
+								<img
+									class="img-item-content"
+									src="https://cdn.myanimelist.net/images/anime/1952/116523.jpg?s=30beef05505b8619a8c541568192cb01"
+									alt=""
+								/>
+								<figcaption class="fcn-item-content">
+									judul anime sdsadfsf afdsfsd<span class="star-wrapper"
+										><img
+											class="star-icon"
+											src="/src/assets/star-icon.png"
+											alt="star icon"
+										/>
+										<caption>
+											8.5
+										</caption></span
+									>
+								</figcaption>
+							</figure>
+						</section>
+						<section>
+							<p class="text-eps">12 Espisode</p>
+							<p class="text-type">TV</p>
+							<figure>
+								<img
+									class="img-item-content"
+									src="https://cdn.myanimelist.net/images/anime/1952/116523.jpg?s=30beef05505b8619a8c541568192cb01"
+									alt=""
+								/>
+								<figcaption class="fcn-item-content">
+									judul anime sdsadfsf afdsfsd<span class="star-wrapper"
+										><img
+											class="star-icon"
+											src="/src/assets/star-icon.png"
+											alt="star icon"
+										/>
+										<caption>
+											8.5
+										</caption></span
+									>
+								</figcaption>
+							</figure>
+						</section>
+						<section>
+							<p class="text-eps">12 Espisode</p>
+							<p class="text-type">TV</p>
+							<figure>
+								<img
+									class="img-item-content"
+									src="https://cdn.myanimelist.net/images/anime/1952/116523.jpg?s=30beef05505b8619a8c541568192cb01"
+									alt=""
+								/>
+								<figcaption class="fcn-item-content">
+									judul anime sdsadfsf afdsfsd<span class="star-wrapper"
+										><img
+											class="star-icon"
+											src="/src/assets/star-icon.png"
+											alt="star icon"
+										/>
+										<caption>
+											8.5
+										</caption></span
+									>
+								</figcaption>
+							</figure>
+						</section>
+					</div>
+				</article>
+				<article>
+					<h2>Upcoming Anime</h2>
+					<div class="list-content-anime">
+						<section>
+							<p class="text-eps">12 Espisode</p>
+							<p class="text-type">TV</p>
+							<figure>
+								<img
+									class="img-item-content"
+									src="https://cdn.myanimelist.net/images/anime/1952/116523.jpg?s=30beef05505b8619a8c541568192cb01"
+									alt=""
+								/>
+								<figcaption class="fcn-item-content">
+									judul anime sdsadfsf afdsfsd Loremg, ipsum dolor.g<span
+										class="star-wrapper"
+										><img
+											class="star-icon"
+											src="/src/assets/star-icon.png"
+											alt="star icon"
+										/>
+										<caption>
+											8.5
+										</caption></span
+									>
+								</figcaption>
+							</figure>
+						</section>
+						<section>
+							<p class="text-eps">12 Espisode</p>
+							<p class="text-type">TV</p>
+							<figure>
+								<img
+									class="img-item-content"
+									src="https://cdn.myanimelist.net/images/anime/1952/116523.jpg?s=30beef05505b8619a8c541568192cb01"
+									alt=""
+								/>
+								<figcaption class="fcn-item-content">
+									judul anime sdsadfsf afdsfsd<span class="star-wrapper"
+										><img
+											class="star-icon"
+											src="/src/assets/star-icon.png"
+											alt="star icon"
+										/>
+										<caption>
+											8.5
+										</caption></span
+									>
+								</figcaption>
+							</figure>
+						</section>
+						<section>
+							<p class="text-eps">12 Espisode</p>
+							<p class="text-type">TV</p>
+							<figure>
+								<img
+									class="img-item-content"
+									src="https://cdn.myanimelist.net/images/anime/1952/116523.jpg?s=30beef05505b8619a8c541568192cb01"
+									alt=""
+								/>
+								<figcaption class="fcn-item-content">
+									judul anime sdsadfsf afdsfsd<span class="star-wrapper"
+										><img
+											class="star-icon"
+											src="/src/assets/star-icon.png"
+											alt="star icon"
+										/>
+										<caption>
+											8.5
+										</caption></span
+									>
+								</figcaption>
+							</figure>
+						</section>
+						<section>
+							<p class="text-eps">12 Espisode</p>
+							<p class="text-type">TV</p>
+							<figure>
+								<img
+									class="img-item-content"
+									src="https://cdn.myanimelist.net/images/anime/1952/116523.jpg?s=30beef05505b8619a8c541568192cb01"
+									alt=""
+								/>
+								<figcaption class="fcn-item-content">
+									judul anime sdsadfsf afdsfsd<span class="star-wrapper"
+										><img
+											class="star-icon"
+											src="/src/assets/star-icon.png"
+											alt="star icon"
+										/>
+										<caption>
+											8.5
+										</caption></span
+									>
+								</figcaption>
+							</figure>
+						</section>
+					</div>
+				</article>
+			</div>
+			<aside>
+				<div class="search-wrapper">
+					<input class="input-search" type="text" placeholder="Search" />
+					<img
+						class="search-icon"
+						src="/src/assets/search-icon.png"
+						alt="search icon"
+					/>
+				</div>
+				<article class="art-side">
+					<h2>Top Airing</h2>
+					<div class="list-side-anime">
+						<section class="item-side-anime">
+							<img
+								class="img-item-side"
+								src="https://cdn.myanimelist.net/images/anime/1952/116523.jpg?s=30beef05505b8619a8c541568192cb01"
+								alt=""
+							/>
+							<div class="wrap-item-info">
+								<h3>Shingeki No Kyojin</h3>
+								<p class="text-genre">genre</p>
+								<div class="wrap-star-side">
+									<span class="star-wrapper star-wrapper-side">
+										<img
+											class="star-icon"
+											src="/src/assets/star-icon.png"
+											alt="star icon"
+										/>
+										<caption>
+											8.5
+										</caption>
+									</span>
+									<p>type</p>
+								</div>
+							</div>
+						</section>
+						<section class="item-side-anime">
+							<img
+								class="img-item-side"
+								src="https://cdn.myanimelist.net/images/anime/1952/116523.jpg?s=30beef05505b8619a8c541568192cb01"
+								alt=""
+							/>
+							<div class="wrap-item-info">
+								<h3>Shingeki No Kyojin</h3>
+								<p class="text-genre">genre</p>
+								<div class="wrap-star-side">
+									<span class="star-wrapper star-wrapper-side">
+										<img
+											class="star-icon"
+											src="/src/assets/star-icon.png"
+											alt="star icon"
+										/>
+										<caption>
+											8.5
+										</caption>
+									</span>
+									<p>type</p>
+								</div>
+							</div>
+						</section>
+						<section class="item-side-anime">
+							<img
+								class="img-item-side"
+								src="https://cdn.myanimelist.net/images/anime/1952/116523.jpg?s=30beef05505b8619a8c541568192cb01"
+								alt=""
+							/>
+							<div class="wrap-item-info">
+								<h3>Shingeki No Kyojin</h3>
+								<p class="text-genre">genre</p>
+								<div class="wrap-star-side">
+									<span class="star-wrapper star-wrapper-side">
+										<img
+											class="star-icon"
+											src="/src/assets/star-icon.png"
+											alt="star icon"
+										/>
+										<caption>
+											8.5
+										</caption>
+									</span>
+									<p>type</p>
+								</div>
+							</div>
+						</section>
+					</div>
+				</article>
+				<article class="art-side">
+					<h2>Top Character</h2>
+					<div class="list-side-anime">
+						<section class="item-side-anime">
+							<img
+								class="img-item-side"
+								src="https://cdn.myanimelist.net/images/anime/1952/116523.jpg?s=30beef05505b8619a8c541568192cb01"
+								alt=""
+							/>
+							<div class="wrap-item-info">
+								<h3>Shingeki No Kyojin</h3>
+								<div class="fav-wrapper">
+									<img
+										class="fav-icon"
+										src="/src/assets/fav-icon.png"
+										alt="favorite icon"
+									/>
+									<p class="fav-count">123243432</p>
+								</div>
+							</div>
+						</section>
+						<section class="item-side-anime">
+							<img
+								class="img-item-side"
+								src="https://cdn.myanimelist.net/images/anime/1952/116523.jpg?s=30beef05505b8619a8c541568192cb01"
+								alt=""
+							/>
+							<div class="wrap-item-info">
+								<h3>Shingeki No Kyojin</h3>
+								<div class="fav-wrapper">
+									<img
+										class="fav-icon"
+										src="/src/assets/fav-icon.png"
+										alt="favorite icon"
+									/>
+									<p class="fav-count">123243432</p>
+								</div>
+							</div>
+						</section>
+						<section class="item-side-anime">
+							<img
+								class="img-item-side"
+								src="https://cdn.myanimelist.net/images/anime/1952/116523.jpg?s=30beef05505b8619a8c541568192cb01"
+								alt=""
+							/>
+							<div class="wrap-item-info">
+								<h3>Shingeki No Kyojin</h3>
+								<div class="fav-wrapper">
+									<img
+										class="fav-icon"
+										src="/src/assets/fav-icon.png"
+										alt="favorite icon"
+									/>
+									<p class="fav-count">123243432</p>
+								</div>
+							</div>
+						</section>
+					</div>
+				</article>
+			</aside>
+		</main>
+	</body>
 </html>

@@ -1,6 +1,7 @@
 :root {
 	--primary: #e50914;
   --bg-dark: #181818;
+	--bg-input: rgb(100,100,100);
 	--text-primary: #fff;
   --text-secondary: #eaeaea;
 }
