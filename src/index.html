@@ -181,6 +181,7 @@
 				max-width: 1180px;
 				width: 100%;
 				margin-top: 1rem;
+				margin-bottom: 2rem;
 				padding: 0 2rem;			
 				border-radius: 1rem;
 				background-color: #000;
@@ -195,6 +196,86 @@
 			.second-title {
 				font-size: 1.25rem;
 				font-weight: 400;
+			}
+			.content-title {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				position: relative;
+			}
+			.content-btn {
+				font-size: 1rem;
+				padding: .25rem 1rem;
+				padding-right: 1.5rem;
+				cursor: pointer;
+				background-color: transparent;
+				color: #fff;
+				border-color: transparent;
+			}
+			.side-button {
+				font-size: 1rem;
+				cursor: pointer;
+				width: 100%;
+				padding: .5rem 0;
+				border-radius: 8px;
+				color: #fff;
+				background-color: var(--primary);
+				border-color: var(--primary);
+			}
+			.right-arrow-icon {
+				width: 1rem;
+				position: absolute;
+				right: 0;
+			}
+
+			@media screen and (max-width: 1200px) {
+				header {
+					margin-top: 0;
+					border-radius: 0;
+				}
+				main {
+					padding: 0 1rem;
+				}
+			}
+
+			@media screen and (max-width: 920px) {
+				header {
+					flex-direction: column;
+					padding-top: 2rem;
+				}
+				.img-titan-kolosal {
+					margin-top: 1rem;				
+					margin-left: 0;
+				}
+			}
+			@media screen and (max-width: 620px) {
+				.img-titan-kolosal {				
+					height: 200px;
+				}
+			}
+			@media screen and (max-width: 540px) {
+				main {				
+					flex-direction: column;
+				}
+				#content {
+					padding: 0;
+				}
+				aside {
+					padding: 0;
+				}
+				.list-side-anime {
+					overflow: hidden;
+					display: flex;
+					gap: 1rem;
+				}
+				.wrap-item-info {
+					max-width: 110px;
+					width: 100%;
+					padding: 4px 0;
+					/* margin-left: 1rem; */
+					display: flex;
+					flex-direction: column;
+				}
 			}
 		</style>
 	</head>
@@ -213,7 +294,15 @@
 		<main>
 			<div id="content">
 				<article>
-					<h2>Summer 2021 Anime</h2>
+					<div class="content-title">
+						<h2>Summer 2021 Anime</h2>
+						<button class="content-btn">More</button>
+						<img
+							class="right-arrow-icon"
+							src="/src/assets/right-arrow.png"
+							alt="right arrow icon"
+						/>
+					</div>
 					<div class="list-content-anime">
 						<section>
 							<p class="text-eps">12 Espisode</p>
@@ -308,10 +397,18 @@
 								</figcaption>
 							</figure>
 						</section>
-					</div>
+					</div>		
 				</article>
 				<article>
-					<h2>Upcoming Anime</h2>
+					<div class="content-title">
+						<h2>Upcoming Anime</h2>
+						<button class="content-btn">More</button>
+						<img
+							class="right-arrow-icon"
+							src="/src/assets/right-arrow.png"
+							alt="right arrow icon"
+						/>
+					</div>
 					<div class="list-content-anime">
 						<section>
 							<p class="text-eps">12 Espisode</p>
@@ -441,7 +538,6 @@
 											8.5
 										</caption>
 									</span>
-									<p>type</p>
 								</div>
 							</div>
 						</section>
@@ -465,35 +561,11 @@
 											8.5
 										</caption>
 									</span>
-									<p>type</p>
-								</div>
-							</div>
-						</section>
-						<section class="item-side-anime">
-							<img
-								class="img-item-side"
-								src="https://cdn.myanimelist.net/images/anime/1952/116523.jpg?s=30beef05505b8619a8c541568192cb01"
-								alt=""
-							/>
-							<div class="wrap-item-info">
-								<h3>Shingeki No Kyojin</h3>
-								<p class="text-genre">genre</p>
-								<div class="wrap-star-side">
-									<span class="star-wrapper star-wrapper-side">
-										<img
-											class="star-icon"
-											src="/src/assets/star-icon.png"
-											alt="star icon"
-										/>
-										<caption>
-											8.5
-										</caption>
-									</span>
-									<p>type</p>
 								</div>
 							</div>
 						</section>
 					</div>
+					<button class="side-button">See More</button>
 				</article>
 				<article class="art-side">
 					<h2>Top Character</h2>
@@ -534,25 +606,8 @@
 								</div>
 							</div>
 						</section>
-						<section class="item-side-anime">
-							<img
-								class="img-item-side"
-								src="https://cdn.myanimelist.net/images/anime/1952/116523.jpg?s=30beef05505b8619a8c541568192cb01"
-								alt=""
-							/>
-							<div class="wrap-item-info">
-								<h3>Shingeki No Kyojin</h3>
-								<div class="fav-wrapper">
-									<img
-										class="fav-icon"
-										src="/src/assets/fav-icon.png"
-										alt="favorite icon"
-									/>
-									<p class="fav-count">123243432</p>
-								</div>
-							</div>
-						</section>
 					</div>
+					<button class="side-button">See More</button>
 				</article>
 			</aside>
 		</main>
