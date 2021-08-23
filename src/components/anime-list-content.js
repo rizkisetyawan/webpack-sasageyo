@@ -1,7 +1,7 @@
 import DataSource from '../data/data-source';
 import './loading-data';
 
-customElements.define('anime-content-list', class extends HTMLElement {
+customElements.define('anime-list-content', class extends HTMLElement {
   static get observedAttributes() { return ['loading', 'dataAnime', 'category']; }
 
   get loading() {
@@ -83,7 +83,7 @@ customElements.define('anime-content-list', class extends HTMLElement {
             height: 279px;
             border-radius: 16px;
             margin-bottom: 0.5rem;
-            object-fit: cover;
+            object-fit: contain;
           }
           .fcn-item-content {
             display: flex;
@@ -111,7 +111,7 @@ customElements.define('anime-content-list', class extends HTMLElement {
             />
           </div>
           <div class="list-content-anime">
-            ${this.loading ? '<loading-data/>' : this.dataAnime.map((anime) => `
+            ${this.loading ? '<loading-data/>' : this.dataAnime?.map((anime) => `
               <section>
                 <p class="text-eps">${anime.episodes || 'Unknown'} episodes</p>
                 <p class="text-type">${anime.type}</p>
@@ -119,7 +119,7 @@ customElements.define('anime-content-list', class extends HTMLElement {
                   <img
                     class="img-item-content"
                     src="${anime.image_url}"
-                    alt=""
+                    alt="${anime.title}"
                   />
                   <figcaption class="fcn-item-content">
                     ${anime.title}

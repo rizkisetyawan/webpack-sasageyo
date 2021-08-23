@@ -15,7 +15,7 @@ customElements.define('loading-data', class extends HTMLElement {
           }
         </style>
         <div class="loading">
-          <h1>Loading ...</h1>  
+          <h5>Loading ...</h5>  
         </div>
       `;
   }

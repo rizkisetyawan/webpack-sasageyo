@@ -69,53 +69,16 @@
 				padding: 2rem;
 				padding-right: 0;
 			}
-			.img-item-side {
-				width: 75px;
-				height: 100px;
-				border-radius: 8px;
-			}
-			.item-side-anime {
-				display: flex;
-				margin-bottom: 1rem;
-			}
+
+
 			h3 {
 				font-size: 1rem;
 			}
-			.text-genre {
-				margin-top: 4px;
-				font-size: 0.9rem;
-				font-weight: 400;
-			}
-			.wrap-item-info {
-				width: 130px;
-				padding: 4px 0;
-				margin-left: 1rem;
-				display: flex;
-				flex-direction: column;
-			}
-			.wrap-star-side {
-				flex: 1;
-				display: flex;
-				justify-content: space-between;
-				align-items: flex-end;
-			}
-			.fav-wrapper {
-				margin-top: 8px;
-				flex-shrink: 0;
-				display: flex;
-			}
-			.fav-icon {
-				width: 1rem;
-				height: 1rem;
-				margin-right: 0.5rem;
-			}
-			.fav-count {
-				font-size: 0.9rem;
-				font-weight: 400;
-			}
-			.star-wrapper-side {
-				margin-left: 0;
-			}
+
+
+
+
+			
 			h1 {
 				font-size: 44px;
 				color: var(--primary);
@@ -124,9 +87,7 @@
 			.logo-icon {
 				width: 4rem;
 			}
-			.art-side {
-				margin-bottom: 3rem;
-			}
+			
 			.jumbotron {				
 				display: flex;
 				padding: 2rem;
@@ -152,21 +113,6 @@
 				font-size: 1.25rem;
 				font-weight: 400;
 			}
-			/* .content-title {
-				display: flex;
-				justify-content: space-between;
-				align-items: center;
-				position: relative;
-			}
-			.content-btn {
-				font-size: 1rem;
-				padding: .25rem 1rem;
-				padding-right: 1.5rem;
-				cursor: pointer;
-				background-color: transparent;
-				color: #fff;
-				border-color: transparent;
-			} */
 			.side-button {
 				font-size: 1rem;
 				cursor: pointer;
@@ -177,11 +123,6 @@
 				background-color: var(--primary);
 				border-color: var(--primary);
 			}
-			/* .right-arrow-icon {
-				width: 1rem;
-				position: absolute;
-				right: 0;
-			} */
 
 			@media screen and (max-width: 1200px) {
 				header {
@@ -249,8 +190,8 @@
 		<main>
 		
 			<div id="content">
-				<anime-content-list category="Summer 2021 Anime"></anime-content-list>
-				<anime-content-list category="Upcoming Anime"></anime-content-list>
+				<anime-list-content category="Summer 2021 Anime"></anime-list-content>
+				<anime-list-content category="Upcoming Anime"></anime-list-content>
 			</div>
 
 			<aside>
@@ -262,100 +203,8 @@
 						alt="search icon"
 					/>
 				</div>
-				<article class="art-side">
-					<h2>Top Airing</h2>
-					<div class="list-side-anime">
-						<section class="item-side-anime">
-							<img
-								class="img-item-side"
-								src="https://cdn.myanimelist.net/images/anime/1952/116523.jpg?s=30beef05505b8619a8c541568192cb01"
-								alt=""
-							/>
-							<div class="wrap-item-info">
-								<h3>Shingeki No Kyojin</h3>
-								<p class="text-genre">genre</p>
-								<div class="wrap-star-side">
-									<span class="star-wrapper star-wrapper-side">
-										<img
-											class="star-icon"
-											src="/src/assets/star-icon.png"
-											alt="star icon"
-										/>
-										<caption>
-											8.5
-										</caption>
-									</span>
-								</div>
-							</div>
-						</section>
-						<section class="item-side-anime">
-							<img
-								class="img-item-side"
-								src="https://cdn.myanimelist.net/images/anime/1952/116523.jpg?s=30beef05505b8619a8c541568192cb01"
-								alt=""
-							/>
-							<div class="wrap-item-info">
-								<h3>Shingeki No Kyojin</h3>
-								<p class="text-genre">genre</p>
-								<div class="wrap-star-side">
-									<span class="star-wrapper star-wrapper-side">
-										<img
-											class="star-icon"
-											src="/src/assets/star-icon.png"
-											alt="star icon"
-										/>
-										<caption>
-											8.5
-										</caption>
-									</span>
-								</div>
-							</div>
-						</section>
-					</div>
-					<button class="side-button">See More</button>
-				</article>
-				<article class="art-side">
-					<h2>Top Character</h2>
-					<div class="list-side-anime">
-						<section class="item-side-anime">
-							<img
-								class="img-item-side"
-								src="https://cdn.myanimelist.net/images/anime/1952/116523.jpg?s=30beef05505b8619a8c541568192cb01"
-								alt=""
-							/>
-							<div class="wrap-item-info">
-								<h3>Shingeki No Kyojin</h3>
-								<div class="fav-wrapper">
-									<img
-										class="fav-icon"
-										src="/src/assets/fav-icon.png"
-										alt="favorite icon"
-									/>
-									<p class="fav-count">123243432</p>
-								</div>
-							</div>
-						</section>
-						<section class="item-side-anime">
-							<img
-								class="img-item-side"
-								src="https://cdn.myanimelist.net/images/anime/1952/116523.jpg?s=30beef05505b8619a8c541568192cb01"
-								alt=""
-							/>
-							<div class="wrap-item-info">
-								<h3>Shingeki No Kyojin</h3>
-								<div class="fav-wrapper">
-									<img
-										class="fav-icon"
-										src="/src/assets/fav-icon.png"
-										alt="favorite icon"
-									/>
-									<p class="fav-count">123243432</p>
-								</div>
-							</div>
-						</section>
-					</div>
-					<button class="side-button">See More</button>
-				</article>
+				<anime-list-side category="Top Airing"></anime-list-side>
+				<anime-list-side category="Top Character"></anime-list-side>
 			</aside>
 
 		</main>

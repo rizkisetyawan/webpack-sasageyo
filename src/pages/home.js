@@ -1,5 +1,5 @@
-// import DataSource from '../data/data-source';
-import '../components/anime-content-list';
+import '../components/anime-list-content';
+import '../components/anime-list-side';
 
 const home = () => {
   // const qwerty = async () => {
