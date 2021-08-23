@@ -116,7 +116,7 @@ customElements.define('anime-list-side', class extends HTMLElement {
                   <p class="fav-count">${anime.favorites}</p>
                 </div>
               ` : `
-                <p class="text-genre">genre</p>
+                <p class="text-genre">${anime.type}</p>
                 <div class="wrap-star-side">
                   <span class="star-wrapper star-wrapper-side">
                     <img
