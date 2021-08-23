@@ -24,7 +24,6 @@ customElements.define('anime-list-side', class extends HTMLElement {
     this.category = this.getAttribute('category') || null;
     this.loading = true;
     const response = await DataSource.categoryAnime(this.category);
-    console.log(response);
     this.dataAnime = response.anime || response.top;
     this.loading = false;
   }
@@ -50,7 +49,7 @@ customElements.define('anime-list-side', class extends HTMLElement {
           width: 75px;
           height: 100px;
           border-radius: 8px;
-          object-fit: contain;
+          object-fit: cover;
         }
         .wrap-item-info {
           width: 130px;
@@ -83,6 +82,16 @@ customElements.define('anime-list-side', class extends HTMLElement {
         .fav-count {
           font-size: 0.9rem;
           font-weight: 400;
+        }
+        .side-button {
+          font-size: 1rem;
+          cursor: pointer;
+          width: 100%;
+          padding: .5rem 0;
+          border-radius: 8px;
+          color: #fff;
+          background-color: var(--primary);
+          border-color: var(--primary);
         }
       </style>
       <article class="art-side">

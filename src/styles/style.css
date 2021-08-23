@@ -12,3 +12,96 @@
 	box-sizing: border-box;
 	font-family: 'Poppins', sans-serif;
 }
+
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: var(--bg-dark);
+	color: var(--text-secondary);
+}
+main {
+	max-width: 1180px;
+	width: 100%;
+	display: flex;
+	margin: 0;
+}
+#content {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	padding: 2rem;
+	padding-left: 0;
+}
+article {
+	margin-bottom: 4rem;
+}
+h2 {
+	font-size: 1.25rem;
+	margin-bottom: 20px;
+	color: var(--text-primary);
+}
+section {
+	position: relative;
+}
+aside {
+	padding: 2rem;
+	padding-right: 0;
+}
+h3 {
+	font-size: 1rem;
+}	
+h1 {
+	font-size: 44px;
+	color: var(--primary);
+	margin-bottom: 1rem;
+}
+@media screen and (max-width: 1200px) {
+	header {
+		margin-top: 0;
+		border-radius: 0;
+	}
+	main {
+		padding: 0 1rem;
+	}
+}
+@media screen and (max-width: 920px) {
+	header {
+		flex-direction: column;
+		padding-top: 2rem;
+	}
+	.img-titan-kolosal {
+		margin-top: 1rem;				
+		margin-left: 0 !important;
+	}
+}
+@media screen and (max-width: 620px) {
+	.img-titan-kolosal {				
+		height: 200px;
+	}
+}
+@media screen and (max-width: 540px) {
+	main {				
+		flex-direction: column;
+	}
+	#content {
+		padding: 0;
+	}
+	aside {
+		padding: 0;
+	}
+	.list-side-anime {
+		overflow: hidden;
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 1rem;
+	}
+	.wrap-item-info {
+		max-width: 110px;
+		width: 100%;
+		padding: 4px 0;
+		display: flex;
+		flex-direction: column;
+	}
+}

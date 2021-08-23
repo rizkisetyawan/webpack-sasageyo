@@ -83,7 +83,7 @@ customElements.define('anime-list-content', class extends HTMLElement {
             height: 279px;
             border-radius: 16px;
             margin-bottom: 0.5rem;
-            object-fit: contain;
+            object-fit: cover;
           }
           .fcn-item-content {
             display: flex;

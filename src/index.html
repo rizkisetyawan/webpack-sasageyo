@@ -1,192 +1,16 @@
+<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="icon" type="image/png" href="/src/assets/logo-web.png" />
 		<title>Sasageyo</title>
-		<!DOCTYPE html>
-		<style>
-			* {
-				padding: 0;
-				box-sizing: border-box;
-			}
-			body {
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				background-color: var(--bg-dark);
-				color: var(--text-secondary);
-			}
-			main {
-				max-width: 1180px;
-				width: 100%;
-				display: flex;
-				margin: 0;
-			}
-			#content {
-				display: flex;
-				flex-direction: column;
-				flex: 1;
-				padding: 2rem;
-				padding-left: 0;
-			}
-			article {
-				margin-bottom: 4rem;
-			}
-			h2 {
-				font-size: 1.25rem;
-				margin-bottom: 20px;
-				color: var(--text-primary);
-			}
-			section {
-				position: relative;
-			}
-			.search-wrapper {
-				position: relative;
-				margin-bottom: 3rem;
-				display: flex;
-				align-items: center;
-			}
-			.search-icon {
-				width: 35px;
-				height: 35px;
-				position: absolute;
-				right: 8px;
-				padding: 8px;
-				cursor: pointer;
-			}
-			.input-search {
-				width: 100%;
-				padding: 8px;
-				border-radius: 8px;
-				background-color: var(--bg-input);
-				border: 1px solid var(--bg-input);
-			}
-			.input-search::placeholder {				
-				color: var(--text-secondary);
-			}			
-			aside {
-				padding: 2rem;
-				padding-right: 0;
-			}
-
-
-			h3 {
-				font-size: 1rem;
-			}
-
-
-
-
-			
-			h1 {
-				font-size: 44px;
-				color: var(--primary);
-				margin-bottom: 1rem;
-			}
-			.logo-icon {
-				width: 4rem;
-			}
-			
-			.jumbotron {				
-				display: flex;
-				padding: 2rem;
-				margin-bottom: 0;
-			}
-			header {
-				max-width: 1180px;
-				width: 100%;
-				margin-top: 1rem;
-				margin-bottom: 2rem;
-				padding: 0 2rem;			
-				border-radius: 1rem;
-				background-color: #000;
-				display: flex;
-				align-items: center;
-				justify-content: space-between;
-			}
-			.img-titan-kolosal {				
-				height: 300px;
-				margin-left: 3rem;
-			}
-			.second-title {
-				font-size: 1.25rem;
-				font-weight: 400;
-			}
-			.side-button {
-				font-size: 1rem;
-				cursor: pointer;
-				width: 100%;
-				padding: .5rem 0;
-				border-radius: 8px;
-				color: #fff;
-				background-color: var(--primary);
-				border-color: var(--primary);
-			}
-
-			@media screen and (max-width: 1200px) {
-				header {
-					margin-top: 0;
-					border-radius: 0;
-				}
-				main {
-					padding: 0 1rem;
-				}
-			}
-
-			@media screen and (max-width: 920px) {
-				header {
-					flex-direction: column;
-					padding-top: 2rem;
-				}
-				.img-titan-kolosal {
-					margin-top: 1rem;				
-					margin-left: 0;
-				}
-			}
-			@media screen and (max-width: 620px) {
-				.img-titan-kolosal {				
-					height: 200px;
-				}
-			}
-			@media screen and (max-width: 540px) {
-				main {				
-					flex-direction: column;
-				}
-				#content {
-					padding: 0;
-				}
-				aside {
-					padding: 0;
-				}
-				.list-side-anime {
-					overflow: hidden;
-					display: flex;
-					gap: 1rem;
-				}
-				.wrap-item-info {
-					max-width: 110px;
-					width: 100%;
-					padding: 4px 0;
-					display: flex;
-					flex-direction: column;
-				}
-			}
-		</style>
 	</head>
 	<body>
 		
-		<header>
-			<div>
-				<h1>Sasa<span style="color: #fff">geyo</span></h1>
-				<p class="second-title">Anime move us like nothing else can, whether they’re scary, funny, dramatic, romantic or anywhere in-between. So many titles, so much to experience.</p>
-			</div>
-			<img
-				class="img-titan-kolosal"
-				src="/src/assets/titan-kolosal.png"
-				alt="logo icon"
-			/>
-		</header>
+		
+		<anime-header></anime-header>
+	
 		<main>
 		
 			<div id="content">
@@ -195,14 +19,7 @@
 			</div>
 
 			<aside>
-				<div class="search-wrapper">
-					<input class="input-search" type="text" placeholder="Search" />
-					<img
-						class="search-icon"
-						src="/src/assets/search-icon.png"
-						alt="search icon"
-					/>
-				</div>
+				<anime-search></anime-search>
 				<anime-list-side category="Top Airing"></anime-list-side>
 				<anime-list-side category="Top Character"></anime-list-side>
 			</aside>
