@@ -4,6 +4,7 @@ customElements.define('loading-data', class extends HTMLElement {
         <style>
           .loading {
             height: 100%;
+            padding: 3rem;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -15,7 +16,7 @@ customElements.define('loading-data', class extends HTMLElement {
           }
         </style>
         <div class="loading">
-          <h5>Loading ...</h5>  
+          <h3>Loading ...</h3>  
         </div>
       `;
   }

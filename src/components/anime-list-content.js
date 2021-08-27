@@ -115,12 +115,14 @@ customElements.define(
         <article>
           <div class="content-title">
             <h2>${this.category}</h2>
+            ${!this.isMore ? `
               <button class="content-btn">More</button>
-            <img
-              class="right-arrow-icon"
-              src="/src/assets/right-arrow.png"
-              alt="right arrow icon"
-            />
+              <img
+                class="right-arrow-icon"
+                src="/src/assets/right-arrow.png"
+                alt="right arrow icon"
+              />
+            ` : ''}
           </div>
           <div class="list-content-anime">
             ${

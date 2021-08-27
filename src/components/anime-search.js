@@ -32,7 +32,7 @@ customElements.define('anime-search', class extends HTMLElement {
       }
     </style>
     <div class="search-wrapper">
-      <input class="input-search" type="text" placeholder="Search" />
+      <input class="input-search" type="text" placeholder="Search Anime ..." />
       <img
         class="search-icon"
         src="/src/assets/search-icon.png"

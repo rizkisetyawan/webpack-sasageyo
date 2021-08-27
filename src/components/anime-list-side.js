@@ -96,16 +96,6 @@ customElements.define('anime-list-side', class extends HTMLElement {
           font-size: 0.9rem;
           font-weight: 400;
         }
-        .side-button {
-          font-size: 1rem;
-          cursor: pointer;
-          width: 100%;
-          padding: .5rem 0;
-          border-radius: 8px;
-          color: #fff;
-          background-color: var(--primary);
-          border-color: var(--primary);
-        }
       </style>
       <article class="art-side">
         <h2>${this.category}</h2>
@@ -147,7 +137,7 @@ customElements.define('anime-list-side', class extends HTMLElement {
             </section>
           `).join('')}
         </div>
-        <button class="side-button">See More</button>
+        <button class="btn side-button">See More</button>
       </article>
     `;
 
