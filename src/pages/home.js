@@ -4,7 +4,6 @@ const home = () => {
   const animeListContentArr = document.querySelectorAll('anime-list-content');
   const animeListSideArr = document.querySelectorAll('anime-list-side');
   const animeList = [...animeListContentArr, ...animeListSideArr];
-  const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 
   const buttonBackEl = () => {
     const buttonBack = document.createElement('button');
@@ -15,23 +14,27 @@ const home = () => {
     return buttonBack;
   };
 
-  const handleClickMore = (title) => {
-    scrollToTop();
+  const loadDataAnime = (keyword) => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     contentElement.innerHTML = '<loading-data/>';
     setTimeout(() => {
-      contentElement.innerHTML = `<anime-list-content category="${title}" isMore="false"></anime-list-content>`;
+      contentElement.innerHTML = `<anime-list-content category="${keyword}" isMore="false"></anime-list-content>`;
       contentElement.appendChild(buttonBackEl());
     }, 2000);
   };
 
+  const handleClickMore = (title) => {
+    loadDataAnime(title);
+  };
+
   const handleClickSearch = () => {
-    console.log(searchAnimeEl.valueSearch);
-    scrollToTop();
-    contentElement.innerHTML = '<loading-data/>';
-    setTimeout(() => {
-      contentElement.innerHTML = `<anime-list-content category="${searchAnimeEl.valueSearch}" isMore="false"></anime-list-content>`;
-      contentElement.appendChild(buttonBackEl());
-    }, 2000);
+    loadDataAnime(searchAnimeEl.valueSearch);
+  };
+
+  const handleEnterSearch = (e) => {
+    if (e.key === 'Enter') {
+      loadDataAnime(searchAnimeEl.valueSearch);
+    }
   };
 
   animeList.forEach((anime) => {
@@ -40,6 +43,7 @@ const home = () => {
   });
 
   searchAnimeEl.clickEventSearch = handleClickSearch;
+  searchAnimeEl.enterEventSearch = handleEnterSearch;
 };
 
 export default home;

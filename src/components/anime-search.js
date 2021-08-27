@@ -8,6 +8,11 @@ customElements.define('anime-search', class extends HTMLElement {
     this.render();
   }
 
+  set enterEventSearch(event) {
+    this._enterEventSearch = event;
+    this.render();
+  }
+
   get valueSearch() {
     return this.querySelector('.input-search').value;
   }
@@ -55,5 +60,6 @@ customElements.define('anime-search', class extends HTMLElement {
     `;
 
     this.querySelector('.search-icon').addEventListener('click', this._clickEventSearch);
+    this.querySelector('.input-search').addEventListener('keypress', this._enterEventSearch);
   }
 });
