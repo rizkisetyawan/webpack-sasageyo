@@ -1,4 +1,4 @@
-import DataSource from '../data/data-source';
+import Services from '../services';
 import './loading-data';
 
 customElements.define(
@@ -41,8 +41,8 @@ customElements.define(
       this.category = this.getAttribute('category') || null;
       this.isMore = this.getAttribute('isMore') || false;
       this.loading = true;
-      const response = await DataSource.categoryAnime(this.category);
-      this.dataAnime = response.anime || response.top;
+      const response = await Services.listAnime(this.category);
+      this.dataAnime = response.anime || response.top || response.results;
       this.loading = false;
     }
 

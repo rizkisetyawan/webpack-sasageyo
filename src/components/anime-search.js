@@ -3,6 +3,15 @@ customElements.define('anime-search', class extends HTMLElement {
     this.render();
   }
 
+  set clickEventSearch(event) {
+    this._clickEventSearch = event;
+    this.render();
+  }
+
+  get valueSearch() {
+    return this.querySelector('.input-search').value;
+  }
+
   render() {
     this.innerHTML = `
     <style>
@@ -24,8 +33,12 @@ customElements.define('anime-search', class extends HTMLElement {
         width: 100%;
         padding: 8px;
         border-radius: 8px;
+        color: #fff;
         background-color: var(--bg-input);
         border: 1px solid var(--bg-input);
+      }
+      .input-search:focus-visible {
+        outline: none;
       }
       .input-search::placeholder {
         color: var(--text-secondary);
@@ -40,5 +53,7 @@ customElements.define('anime-search', class extends HTMLElement {
       />
     </div>
     `;
+
+    this.querySelector('.search-icon').addEventListener('click', this._clickEventSearch);
   }
 });

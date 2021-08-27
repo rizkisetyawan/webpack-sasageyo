@@ -1,4 +1,4 @@
-import DataSource from '../data/data-source';
+import Services from '../services';
 import './loading-data';
 
 customElements.define('anime-list-side', class extends HTMLElement {
@@ -36,7 +36,7 @@ customElements.define('anime-list-side', class extends HTMLElement {
   async connectedCallback() {
     this.category = this.getAttribute('category') || null;
     this.loading = true;
-    const response = await DataSource.categoryAnime(this.category);
+    const response = await Services.listAnime(this.category);
     this.dataAnime = response.anime || response.top;
     this.loading = false;
   }
