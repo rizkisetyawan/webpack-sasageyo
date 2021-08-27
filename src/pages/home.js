@@ -7,7 +7,7 @@ const home = () => {
   const handleClickMore = async (title) => {
     contentElement.innerHTML = '<loading-data/>';
     setTimeout(() => {
-        contentElement.innerHTML = `<anime-list-content category="${title}" isMore="true"></anime-list-content>`;
+      contentElement.innerHTML = `<anime-list-content category="${title}" isMore="true"></anime-list-content>`;
     }, 2000);
   };
 
