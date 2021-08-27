@@ -1,39 +1,57 @@
 import DataSource from '../data/data-source';
 import './loading-data';
 
-customElements.define('anime-list-content', class extends HTMLElement {
-  static get observedAttributes() { return ['loading', 'dataAnime', 'category']; }
+customElements.define(
+  'anime-list-content',
+  class extends HTMLElement {
+    static get observedAttributes() {
+      return ['loading', 'dataAnime', 'category', 'isMore'];
+    }
 
-  get loading() {
-    return JSON.parse(this.getAttribute('loading'));
-  }
+    get loading() {
+      return JSON.parse(this.getAttribute('loading'));
+    }
 
-  set loading(v) {
-    this.setAttribute('loading', JSON.stringify(v));
-  }
+    set loading(v) {
+      this.setAttribute('loading', JSON.stringify(v));
+    }
 
-  get dataAnime() {
-    return JSON.parse(this.getAttribute('dataAnime'));
-  }
+    get dataAnime() {
+      return JSON.parse(this.getAttribute('dataAnime'));
+    }
 
-  set dataAnime(v) {
-    this.setAttribute('dataAnime', JSON.stringify(v));
-  }
+    set dataAnime(v) {
+      this.setAttribute('dataAnime', JSON.stringify(v));
+    }
 
-  async connectedCallback() {
-    this.category = this.getAttribute('category') || null;
-    this.loading = true;
-    const response = await DataSource.categoryAnime(this.category);
-    this.dataAnime = response.anime || response.top;
-    this.loading = false;
-  }
+    set isMore(v) {
+      this.setAttribute('isMore', JSON.stringify(v));
+    }
 
-  attributeChangedCallback() {
-    this.render();
-  }
+    get isMore() {
+      return JSON.parse(this.getAttribute('isMore'));
+    }
 
-  render() {
-    this.innerHTML = `
+    set moreClickEvent(event) {
+      this._moreClickEvent = () => event(this.category);
+      this.render();
+    }
+
+    async connectedCallback() {
+      this.category = this.getAttribute('category') || null;
+      this.isMore = this.getAttribute('isMore') || false;
+      this.loading = true;
+      const response = await DataSource.categoryAnime(this.category);
+      this.dataAnime = response.anime || response.top;
+      this.loading = false;
+    }
+
+    attributeChangedCallback() {
+      this.render();
+    }
+
+    render() {
+      this.innerHTML = `
         <style>
           .content-title {
             display: flex;
@@ -58,9 +76,12 @@ customElements.define('anime-list-content', class extends HTMLElement {
           .list-content-anime {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            height: 323px;
-            overflow: hidden;
             gap: 1.5rem;
+            ${!this.isMore
+              && `
+              height: 323px;
+              overflow: hidden;
+            `}
           }
           .text-eps {
             border-top-left-radius: 16px;
@@ -89,21 +110,12 @@ customElements.define('anime-list-content', class extends HTMLElement {
             display: flex;
             justify-content: space-between;
           }
-          .star-wrapper {
-            flex-shrink: 0;
-            margin-left: 1rem;
-            display: flex;
-          }
-          .star-icon {
-            width: 1rem;
-            height: 1rem;
-            margin-right: 0.5rem;
-          }
+
         </style>
         <article>
           <div class="content-title">
             <h2>${this.category}</h2>
-            <button class="content-btn">More</button>
+              <button class="content-btn">More</button>
             <img
               class="right-arrow-icon"
               src="/src/assets/right-arrow.png"
@@ -111,10 +123,17 @@ customElements.define('anime-list-content', class extends HTMLElement {
             />
           </div>
           <div class="list-content-anime">
-            ${this.loading ? '<loading-data/>' : this.dataAnime?.map((anime) => `
+            ${
+  this.loading
+    ? '<loading-data/>'
+    : this.dataAnime
+      ?.map(
+        (anime) => `
               <section>
+              ${this.category !== 'Top Character' ? `
                 <p class="text-eps">${anime.episodes || 'Unknown'} episodes</p>
                 <p class="text-type">${anime.type}</p>
+              ` : ''}
                 <figure>
                   <img
                     class="img-item-content"
@@ -128,16 +147,30 @@ customElements.define('anime-list-content', class extends HTMLElement {
                       src="/src/assets/star-icon.png"
                       alt="star icon"
                     />
+                    ${this.category !== 'Top Character' ? `
                       <caption>
                         ${anime.score === 0 ? 'soon' : anime.score}
                       </caption>
+                    ` : `
+                      <caption>
+                        ${anime.favorites}
+                      </caption>
+                    `}
                     </span>
                   </figcaption>
                 </figure>
               </section>
-            `).join('')}
+            `,
+      )
+      .join('')
+}
           </div>
         </article>
     `;
-  }
-});
+      this.querySelector('.content-btn').addEventListener(
+        'click',
+        this._moreClickEvent,
+      );
+    }
+  },
+);

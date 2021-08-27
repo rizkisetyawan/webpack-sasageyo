@@ -2,7 +2,7 @@ import DataSource from '../data/data-source';
 import './loading-data';
 
 customElements.define('anime-list-side', class extends HTMLElement {
-  static get observedAttributes() { return ['loading', 'dataAnime', 'category']; }
+  static get observedAttributes() { return ['loading', 'dataAnime', 'category', 'isMore']; }
 
   get loading() {
     return JSON.parse(this.getAttribute('loading'));
@@ -18,6 +18,19 @@ customElements.define('anime-list-side', class extends HTMLElement {
 
   set dataAnime(v) {
     this.setAttribute('dataAnime', JSON.stringify(v));
+  }
+
+  set isMore(v) {
+    this.setAttribute('isMore', JSON.stringify(v));
+  }
+
+  get isMore() {
+    return JSON.parse(this.getAttribute('isMore'));
+  }
+
+  set moreClickEvent(event) {
+    this._moreClickEvent = () => event(this.category);
+    this.render();
   }
 
   async connectedCallback() {
@@ -137,5 +150,10 @@ customElements.define('anime-list-side', class extends HTMLElement {
         <button class="side-button">See More</button>
       </article>
     `;
+
+    this.querySelector('button.side-button').addEventListener(
+      'click',
+      this._moreClickEvent,
+    );
   }
 });
