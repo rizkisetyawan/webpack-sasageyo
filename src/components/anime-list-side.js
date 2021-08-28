@@ -98,7 +98,7 @@ customElements.define('anime-list-side', class extends HTMLElement {
         }
       </style>
       <article class="art-side">
-        <h2>${this.category}</h2>
+        <h3>${this.category}</h3>
         <div class="list-side-anime">
           ${this.loading ? '<loading-data/>' : this.dataAnime?.slice(0, 2).map((anime) => `
             <section class="item-side-anime">
@@ -108,7 +108,7 @@ customElements.define('anime-list-side', class extends HTMLElement {
                 alt="${anime.title}"
               />
               <div class="wrap-item-info">
-                <h3>${anime.title}</h3>
+                <h4>${anime.title}</h4>
                 ${this.category === 'Top Character' ? `
                 <div class="fav-wrapper">
                   <img

@@ -5,7 +5,7 @@ customElements.define(
   'anime-list-content',
   class extends HTMLElement {
     static get observedAttributes() {
-      return ['loading', 'dataAnime', 'category', 'isMore'];
+      return ['loading', 'dataAnime', 'category', 'isMore', 'isSearch'];
     }
 
     get loading() {
@@ -32,6 +32,14 @@ customElements.define(
       return JSON.parse(this.getAttribute('isMore'));
     }
 
+    set isSearch(v) {
+      this.setAttribute('isSearch', JSON.stringify(v));
+    }
+
+    get isSearch() {
+      return JSON.parse(this.getAttribute('isSearch'));
+    }
+
     set moreClickEvent(event) {
       this._moreClickEvent = () => event(this.category);
       this.render();
@@ -43,6 +51,7 @@ customElements.define(
       this.loading = true;
       const response = await Services.listAnime(this.category);
       this.dataAnime = response.anime || response.top || response.results;
+      this.isSearch = !!response.results;
       this.loading = false;
     }
 
@@ -114,7 +123,7 @@ customElements.define(
         </style>
         <article>
           <div class="content-title">
-            <h2>${this.category}</h2>
+            <h2>${this.isSearch ? `Search "${this.category}"` : this.category}</h2>
             ${!this.isMore ? `
               <button class="content-btn">More</button>
               <img

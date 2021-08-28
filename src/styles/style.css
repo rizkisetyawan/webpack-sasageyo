@@ -36,9 +36,13 @@ main {
 article {
 	margin-bottom: 4rem;
 }
-h2 {
+h3 {
 	font-size: 1.25rem;
+}
+h2, h3 {
 	margin-bottom: 20px;
+}
+h2, h3, h4 {
 	color: var(--text-primary);
 }
 section {
@@ -48,9 +52,6 @@ aside {
 	padding: 2rem;
 	padding-right: 0;
 }
-h3 {
-	font-size: 1rem;
-}	
 h1 {
 	font-size: 44px;
 	color: var(--primary);
