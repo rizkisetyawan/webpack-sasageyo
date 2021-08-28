@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 class Services {
   static async listAnime(keywoard) {
     const listEndpoint = [
@@ -9,11 +11,11 @@ class Services {
     const data = listEndpoint.find((item) => keywoard === item.title);
     let res;
     if (data) {
-      res = await fetch(`https://api.jikan.moe/v3/${data.endpoint}`);
+      res = await axios.get(`https://api.jikan.moe/v3/${data.endpoint}`);
     } else {
-      res = await fetch(`https://api.jikan.moe/v3/search/anime?q=${keywoard}&page=1`);
+      res = await axios.get(`https://api.jikan.moe/v3/search/anime?q=${keywoard}&page=1`);
     }
-    const resJson = res.json();
+    const resJson = res.data;
     return resJson;
   }
 }
