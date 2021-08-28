@@ -1,3 +1,5 @@
+import SearchIcon from '../assets/search-icon.png';
+
 customElements.define('anime-search', class extends HTMLElement {
   async connectedCallback() {
     this.render();
@@ -53,7 +55,7 @@ customElements.define('anime-search', class extends HTMLElement {
       <input class="input-search" type="text" placeholder="Search Anime ..." />
       <img
         class="search-icon"
-        src="/src/assets/search-icon.png"
+        src="${SearchIcon}"
         alt="search icon"
       />
     </div>

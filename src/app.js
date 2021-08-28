@@ -1,3 +1,4 @@
+import 'regenerator-runtime';
 import './styles/style.css';
 import './components/anime-header';
 import './components/anime-search';

@@ -1,4 +1,6 @@
 import Services from '../services';
+import StarIcon from '../assets/star-icon.png';
+import FavIcon from '../assets/fav-icon.png';
 import './loading-data';
 
 customElements.define('anime-list-side', class extends HTMLElement {
@@ -113,7 +115,7 @@ customElements.define('anime-list-side', class extends HTMLElement {
                 <div class="fav-wrapper">
                   <img
                     class="fav-icon"
-                    src="/src/assets/fav-icon.png"
+                    src="${FavIcon}"
                     alt="favorite icon"
                   />
                   <p class="fav-count">${anime.favorites}</p>
@@ -124,7 +126,7 @@ customElements.define('anime-list-side', class extends HTMLElement {
                   <span class="star-wrapper star-wrapper-side">
                     <img
                       class="star-icon"
-                      src="/src/assets/star-icon.png"
+                      src="${StarIcon}"
                       alt="star icon"
                     />
                     <caption>

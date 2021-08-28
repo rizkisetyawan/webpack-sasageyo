@@ -1,4 +1,6 @@
 import Services from '../services';
+import RightArrow from '../assets/right-arrow.png';
+import StarIcon from '../assets/star-icon.png';
 import './loading-data';
 
 customElements.define(
@@ -128,7 +130,7 @@ customElements.define(
               <button class="content-btn">More</button>
               <img
                 class="right-arrow-icon"
-                src="/src/assets/right-arrow.png"
+                src="${RightArrow}"
                 alt="right arrow icon"
               />
             ` : ''}
@@ -155,7 +157,7 @@ customElements.define(
                     ${anime.title}
                     <span class="star-wrapper"><img
                       class="star-icon"
-                      src="/src/assets/star-icon.png"
+                      src="${StarIcon}"
                       alt="star icon"
                     />
                     ${this.category !== 'Top Character' ? `

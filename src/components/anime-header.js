@@ -1,3 +1,5 @@
+import TitanKolosal from '../assets/titan-kolosal.png';
+
 customElements.define('anime-header', class extends HTMLElement {
   async connectedCallback() {
     this.render();
@@ -47,7 +49,7 @@ customElements.define('anime-header', class extends HTMLElement {
       </div>
       <img
         class="img-titan-kolosal"
-        src="/src/assets/titan-kolosal.png"
+        src="${TitanKolosal}"
         alt="logo icon"
       />
     </header>
